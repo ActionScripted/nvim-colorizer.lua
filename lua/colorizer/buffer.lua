@@ -199,11 +199,10 @@ function M.add_highlight(bufnr, ns_id, line_start, line_end, data, ud_opts, hl_o
           opts.virt_text = {
             {
               string.format(
-                "%s%s%s",
+                "%s%s",
                 ud_opts.virtualtext_inline == "before"
                     and (ud_opts.virtualtext or const.defaults.virtualtext)
-                  or " ",
-                ud_opts.virtualtext_inline == "before" and " " or "",
+                  or "",
                 ud_opts.virtualtext_inline == "after"
                     and (ud_opts.virtualtext or const.defaults.virtualtext)
                   or ""
